@@ -1,5 +1,25 @@
 $(document).ready(function() {
 
+
+	$(".toggle-mnu").click(function () { 
+		$(this).toggleClass("on");
+		$(".main-mnu").slideToggle("normal", function () { 
+			//Delete attribute `style` after animation
+			if ($(this).css("display") === "none") {
+				$(this).removeAttr("style");
+			}
+		 });
+	});
+
+$(".main-mnu li").click(function () { 
+	$(".main-mnu li").removeClass("active");
+	$(this).toggleClass("active");
+
+	
+});
+
+
+
 	//Цели для Яндекс.Метрики и Google Analytics
 	$(".count_element").on("click", (function() {
 		ga("send", "event", "goal", "goal");
