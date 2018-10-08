@@ -24,8 +24,118 @@ body input:required:valid,
 body textarea:required:valid
 	color: #fff
 
-//Custom Styles Here
+.homesect
+	padding-top: 70px
+	background-color: #f9f9f9
+	position: relative
+	h2
+		text-align: center
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			width: 165px
+			height: 4px
+			bottom: -30px
+			right: 50%
+			background-color: $accent
+			transform: translate(50%)
+	.section-head
+		margin-bottom: 80px
+		p
+			text-align: center
+			padding-top: 40px
+			a
+				text-decoration: underline
+				font-family: "RalewayBold", $helvetica
+				&:hover
+					text-decoration: none
+	.section-bottom
+		text-align: center
+		background-color: #E5E5E5
+		padding: 50px 0
+	&::before
+		content: ''
+		height: 6px
+		width: 100%
+		top: -6px
+		position: absolute
+		background-image: url(img/bah_1.png)
+		background-repeat: repeat-x
+	.section-content
+		background-image: url(img/s1_gray_bg.png)
+		background-position: bottom
+		background-repeat: no-repeat
+		position: relative
+		padding-top: 40px
+		.s1-bottom-triangle
+			position: relative
+			background-image: url(img/s1_triangle.svg)
+			bottom: 0
+			background-position: top
+			background-size: 100% 100%
+			height: 90px
+			width: 100%
+			text-align: center
+			.triangle-logo
+				width: 116px
+				margin-top: 30px
+				position: relative
+				z-index: 2
+			.scales
+				width: 160px
+				position: absolute
+				left: 50%
+				transform: translate(-50%, 0)
+				top: -130px
 
+	.s1-bottom
+		background-color: #394B5F
+		padding: 15px 0 65px
+		.info-item
+			margin-top: 0
+			p
+				padding-bottom: 20px
+				color: #fff
+				border-bottom: 1px solid #546476
+
+		
+
+		.info-item-wrap:nth-child(2)
+			.info-item
+				margin-top: 40px
+
+
+.info-item
+	padding-left: 40px
+	max-width: 264px
+	line-height: em(19px)
+	margin: 58px 0
+	position: relative
+	h4
+		margin-top: 0
+		margin-bottom: 10px
+		a
+			font-size: em(24px)
+			line-height: em(13px)
+			text-transform: none
+			&:hover
+				text-decoration: none
+	p
+		font-size: em(16px)
+		border-bottom: 1px solid #DEE1E5
+		padding-bottom: 20px
+
+
+.info-item-wrap:nth-child(2)
+	.info-item
+		margin-top: 0
+
+
+
+.section-1
+	.section-bottom
+		background-color: #2C3949
 
 //ALWAYS END
 @import "_media.sass"

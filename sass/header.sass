@@ -32,10 +32,16 @@ a, a:hover, a:focus
 	position: relative
 	padding: 15px 30px
 	border-bottom: 3px solid #B97200
-
-
-
-
+	text-decoration: none
+	&:hover
+		color: #111
+		text-decoration: none
+	&:active
+		color: #111
+		text-decoration: none
+	&:focus
+		color: #111
+		text-decoration: none
 
 h1
 	font-size: em(48px)
@@ -207,6 +213,9 @@ b, strong
 					font-size: em(20px)
 					color: #fff
 					text-decoration: none
+					outline: 1px solid transparent
+					&:focus
+						outline: 1px solid transparent
 					&:hover
 						text-decoration: underline
 		
@@ -240,9 +249,11 @@ b, strong
 		margin: 8px 0
 		box-shadow: 0 -3px 0  #1F2A36
 		transition: all 1s ease
+		outline: 1px solid transparent
 		&:focus
 			box-shadow: 0 -6px 0  lighten($accent, 5%)
 			background-color: #3D4F63
+			outline: 1px solid transparent
 	label
 		display: block
 		letter-spacing: 1.5px
@@ -278,8 +289,6 @@ b, strong
 		&:hover
 			opacity: 1
 
-	
-	
 .hidden
 	display: none
 
