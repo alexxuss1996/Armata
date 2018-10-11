@@ -54,7 +54,10 @@
 			.s1-bottom-triangle
 				background-size: cover
 
-	
+	.section_1
+		.section-content
+			background-position: bottom
+			min-height: 560px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -80,21 +83,30 @@
 		-ms-animation: none !important
 		animation: none !important
 
-	.section-1
-		.info-item
-			margin: 40px 0
-			max-width: 100%
-			margin-top: 20px
-			margin-bottom: 20px
-			text-align: center
+	.homesect
+		.section-content
+			padding-top: 0
+			padding-bottom: 40px
+		.info-item-wrap
 			&:first-child
 				margin-top: 0
-			&:last-child
-				border-bottom: none
-			.s1-bottom
-				.info-item:last-child
-					p
-						border-bottom: none
+			.info-item
+				margin: 40px 0
+				max-width: 100%
+				margin-top: 20px
+				margin-bottom: 20px
+				text-align: center
+				p	
+					border-bottom: 1px solid #bbc1c8
+	.s1-bottom
+		.info-item-wrap
+			.info-item
+				p
+					border-bottom: 1px solid #546476
+		.info-item-wrap:last-child
+			.info-item
+				p
+					border-bottom: none
 
 
 

@@ -9,14 +9,16 @@ $(document).ready(function() {
 				$(this).removeAttr("style");
 			}
 		 });
+		 return false;
 	});
 
 $(".main-mnu li").click(function () { 
 	$(".main-mnu li").removeClass("active");
 	$(this).toggleClass("active");
-
-	
 });
+
+$(".section-content .info-item").equalHeights();
+$(".s1-bottom .info-item").equalHeights();
 
 
 

@@ -63,13 +63,10 @@ body textarea:required:valid
 		background-image: url(img/bah_1.png)
 		background-repeat: repeat-x
 	.section-content
-		background-image: url(img/s1_gray_bg.png)
-		background-position: bottom
-		background-repeat: no-repeat
 		position: relative
-		padding-top: 40px
+		padding-bottom: 90px
 		.s1-bottom-triangle
-			position: relative
+			position: absolute
 			background-image: url(img/s1_triangle.svg)
 			bottom: 0
 			background-position: top
@@ -99,18 +96,22 @@ body textarea:required:valid
 				color: #fff
 				border-bottom: 1px solid #546476
 
-		
-
 		.info-item-wrap:nth-child(2)
 			.info-item
 				margin-top: 40px
+			
+.section_1
+	.section-content
+		background-image: url(img/s1_gray_bg.png)
+		background-position: top
+		background-repeat: no-repeat
 
 
 .info-item
 	padding-left: 40px
-	max-width: 264px
+	max-width: 308px
 	line-height: em(19px)
-	margin: 58px 0
+	margin: 60px 0
 	position: relative
 	h4
 		margin-top: 0
@@ -131,11 +132,17 @@ body textarea:required:valid
 	.info-item
 		margin-top: 0
 
+.info-item-wrap
+	&:nth-child(4), &:last-child
+		.info-item
+			margin-bottom: 0
 
 
-.section-1
+.section_1
 	.section-bottom
 		background-color: #2C3949
 
+
+	
 //ALWAYS END
 @import "_media.sass"
