@@ -22,6 +22,7 @@ $(".s1-bottom .info-item").equalHeights();
 
 
 
+
 	//Цели для Яндекс.Метрики и Google Analytics
 	$(".count_element").on("click", (function() {
 		ga("send", "event", "goal", "goal");
