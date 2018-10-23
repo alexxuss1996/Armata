@@ -20,6 +20,7 @@ $(".main-mnu li").click(function () {
 $(".s1-bottom .info-item").equalHeights();
 $(".section_1 .section-content .info-item").equalHeights();
 $(".section_3 .section-content .info-item").equalHeights();
+
 $(".section_4").waypoint(function() {
 	$(".section_4 .card").each(function(index) {
 		var ths = $(this);
@@ -27,10 +28,20 @@ $(".section_4").waypoint(function() {
 			$(ths).removeClass("card-off").addClass("card-on");
 		}, 150*index)
 	})
-	
 }, { offset: "20%"})
 
+$(".section_5").waypoint(function() {
+	$(".section_5 .tc-item").each(function(index) {
+		var ths = $(this);
+		setTimeout(function() {
+			var myAnimation = new DrawFillSVG({
+				elementId: "tc-svg-" + index
+			});
 
+	
+		}, 700*index)
+	})
+}, {offset: "20%"})
 
 
 

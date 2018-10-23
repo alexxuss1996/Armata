@@ -319,5 +319,52 @@ body textarea:required:valid
 				color: $accent
 			
 
+.triangles-container
+	font-size: em(19px)
+	margin: 20px 0 70px
+	font-family: "PFCentroSlabProMedium", $helvetica
+	color: #fff
+	text-align: center
+	.tc-item
+		display: inline-block
+		transition: all 1s ease
+		width: 290px
+		height: 128px
+		text-align: center
+		position: relative
+		vertical-align: top
+		margin-left: -40px
+		&:first-child
+			margin-left: 0
+			.tc-content
+				margin-left: 40px
+		&:hover
+			transform: scale(10px 10px)
+		svg
+			position: absolute
+			top: 0
+			left: 0
+		.tc-content
+			position: relative
+			z-index: 1
+			text-align: left
+			margin-top: 40px
+			margin-left: 60px
+			cursor: pointer
+			color: #FFF
+			padding-right: 20px
+			span
+				font-size: em(20px)
+			a
+				color: #fff
+				&:hover
+					text-decoration: none
+			img
+				margin-right: 15px
+				height: 40px
+				float: left
+
+
+
 //ALWAYS END
 @import "_media.sass"
