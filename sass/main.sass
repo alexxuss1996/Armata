@@ -103,7 +103,7 @@ body textarea:required:valid
 
 		.info-item-wrap:nth-child(2)
 			.info-item
-				margin-top: 40px
+				margin-top: 60px
 			
 .section_1
 	.section-content
@@ -187,6 +187,7 @@ body textarea:required:valid
 .img-wrap
 	img
 		width: 100%
+		max-width: 100%
 
 
 .s2-items-container
@@ -196,6 +197,77 @@ body textarea:required:valid
 		padding: 15px 0
 		width: 165px
 
+
+.s_dark
+	color: #f9f9f9
+	background-color: #2C3949
+	.section-head
+		h2
+			color: #fff
+		p
+			color: #e5e5e5
+	&::before
+		background-image: url(img/bah_2.png)
+	.section-bottom
+		background-color: #394B5F
+		margin-top: 60px
+	
+
+.section_3
+	@extend .section_1
+	.section-content
+		padding-bottom: 0
+		background-image: url(img/s3_sun_bg.png)
+		min-height: 850px
+		padding-top: 60px
+		.info-item
+			margin-top: 60px
+			margin-left: 40px
+			p	
+				border-bottom: none
+		.s3-img-wrapper
+			background-color: $accent
+			border-radius: 50%
+			position: relative
+			width: 130px
+			height: 130px
+			img
+				width: 64px
+				display: inline-block
+				margin-top: 32px
+				transform: translate(-5%, 0)
+				position: absolute
+
+
+			
+		.section-bottom
+			margin-top: 40px
+		.info-item-wrap
+			&:nth-child(2)
+				.info-item
+					margin-top: 0
+		.info-item-wrap
+			&:nth-child(8)
+				.info-item
+					margin-top: 130px
+		.info-item-wrap
+			&:nth-child(5)
+				.info-item
+					margin: 44px 114px
+		.info-item-wrap
+			&:nth-child(4), &:nth-child(6)
+				.info-item
+					margin-top: 60px
+		.info-item-wrap
+			&:nth-child(1), &:nth-child(7)
+				.info-item
+					margin-left: 82px
+		.info-item-wrap
+			&:nth-child(3), &:nth-child(9)
+				.info-item
+					margin-left: -20px
+
+	
 
 //ALWAYS END
 @import "_media.sass"

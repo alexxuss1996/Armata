@@ -32,11 +32,20 @@
 					&:hover
 						background-color: #273646
 
-
+	.section_3
+		.section-content
+			.info-item-wrap
+				&:nth-child(5)
+					.info-item
+						margin: 44px 80px
 
 	.phone_wrap .phone
 		padding-right: 65px
-
+	.section_1
+		.info-item-wrap:nth-child(4)
+				.info-item
+					p
+						margin-top: 32px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
@@ -58,6 +67,36 @@
 		.section-content
 			background-position: bottom
 			min-height: 560px
+
+	
+	.section_3
+		.section-content
+			background-image: none
+			padding-top: 0
+			.info-item-wrap
+				.info-item
+					margin-top: 0
+					margin-left: 0
+				&:nth-child(2)
+					.info-item
+						margin-top: 0
+			.info-item-wrap
+				&:nth-child(8)
+					.info-item
+						margin-top: 0
+			.info-item-wrap
+				&:nth-child(4), &:nth-child(6)
+					.info-item
+						margin-top: 0
+			.info-item-wrap
+				&:nth-child(1), &:nth-child(7)
+					.info-item
+						margin-left: 0
+			.info-item-wrap
+				&:nth-child(3), &:nth-child(9)
+					.info-item
+						margin-left: 0
+			
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -93,6 +132,9 @@
 					p
 						border-bottom: none
 
+	.section_1
+		.section-content
+			background-image: none
 
 		.info-item-wrap
 			&:first-child
@@ -118,7 +160,14 @@
 				p
 					border-bottom: none
 
-	
+	.section_3
+		.section-bottom
+			margin-top: 0
+		.section-content
+			padding-bottom: 0
+			.info-item
+				p
+					border-bottom: 1px solid #546476
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -145,7 +194,7 @@
 	.logo img
 		width: 70px
 
-
+	
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
