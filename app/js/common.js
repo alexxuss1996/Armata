@@ -39,11 +39,19 @@ $(".section_5").waypoint(function() {
 			});
 
 	
-		}, 700*index)
-	})
+		}, 500*index)
+	});
+	this.destroy();
 }, {offset: "20%"})
 
-
+$(".section_6").waypoint(function() {
+	$(".section_6 .team").each(function(index) {
+		var ths = $(this);
+		setInterval(function() {
+			$(ths).removeClass("team-off").addClass("team-on");
+		}, 150*index)
+	})
+}, { offset: "20%"})
 
 	//Цели для Яндекс.Метрики и Google Analytics
 	$(".count_element").on("click", (function() {

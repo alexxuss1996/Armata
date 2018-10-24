@@ -327,42 +327,75 @@ body textarea:required:valid
 	text-align: center
 	.tc-item
 		display: inline-block
-		transition: all 1s ease
+		transition: all .5s ease
 		width: 290px
 		height: 128px
 		text-align: center
 		position: relative
 		vertical-align: top
-		margin-left: -40px
+		margin-left: -45px
+		&:hover
+			transform: scale(1.08)
+			z-index: 3
+			path
+				fill-opacity: 0!important
+				stroke-opacity: 1!important
 		&:first-child
 			margin-left: 0
 			.tc-content
 				margin-left: 40px
-		&:hover
-			transform: scale(10px 10px)
 		svg
 			position: absolute
 			top: 0
 			left: 0
 		.tc-content
 			position: relative
+			cursor: pointer
 			z-index: 1
 			text-align: left
 			margin-top: 40px
 			margin-left: 60px
-			cursor: pointer
 			color: #FFF
 			padding-right: 20px
 			span
 				font-size: em(20px)
-			a
-				color: #fff
-				&:hover
-					text-decoration: none
 			img
 				margin-right: 15px
 				height: 40px
 				float: left
+
+
+.teams
+	@extend .cards
+	.team
+		.card-icon
+			overflow: hidden
+			line-height: 0
+			box-shadow: 0 0 0 4px #d6d6d6
+			img
+				width: 100%
+		@extend .card
+		background-color: #e5e5e5
+		border-bottom: 4px solid #d6d6d6
+		&-off
+			transform: rotateY(100deg)
+			opacity: 0
+		&-on
+			opacity: 1
+		h4
+			color: #333
+			text-transform: none
+			margin-bottom: 10px
+		p
+			font-size: em(15px)
+			color: #6e7b8b
+			height: auto
+			margin-bottom: 20px
+
+		.team-phone
+			font-family: "RobotoBold", $helvetica
+			color: #333
+
 
 
 
