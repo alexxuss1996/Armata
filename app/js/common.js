@@ -133,7 +133,7 @@ $(".section_8").waypoint(function() {
 
 	//Аякс отправка форм
 	//Документация: http://api.jquery.com/jquery.ajax/
-	$("#form").submit(function() {
+	$(".forms").submit(function() {
 		$.ajax({
 			type: "POST",
 			url: "mail.php",
@@ -142,7 +142,7 @@ $(".section_8").waypoint(function() {
 			alert("Спасибо за заявку!");
 			setTimeout(function() {
 				
-				$("#form").trigger("reset");
+				$(".forms").trigger("reset");
 			}, 1000);
 		});
 		return false;
