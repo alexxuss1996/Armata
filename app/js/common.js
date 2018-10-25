@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
 
+
 	$(".toggle-mnu").click(function () { 
 		$(this).toggleClass("on");
 		$(".main-mnu").slideToggle("normal", function () { 
@@ -53,6 +54,16 @@ $(".section_6").waypoint(function() {
 	})
 }, { offset: "20%"})
 
+$(".slider-container").owlCarousel({
+	items: 1, 
+	loop: true, 
+	nav: true, 
+	navText: "",
+	smartSpeed: 1000
+});
+
+
+
 	//Цели для Яндекс.Метрики и Google Analytics
 	$(".count_element").on("click", (function() {
 		ga("send", "event", "goal", "goal");
@@ -91,9 +102,11 @@ $(".section_6").waypoint(function() {
 			$.smoothScroll();
 		}
 	} catch(err) {
-
+		console.log(err);
+		
 	};
 
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
 });
+
