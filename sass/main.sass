@@ -52,6 +52,7 @@ body textarea:required:valid
 		p
 			text-align: center
 			padding-top: 40px
+			animation-delay: .4s
 			a
 				text-decoration: underline
 				font-family: "RalewayBold", $helvetica
@@ -157,7 +158,14 @@ body textarea:required:valid
 		text-align: center
 		color: #111
 		display: inline-block
+		transform: translateY(-20px)
 		margin-bottom: 60px
+		transition: all .5s ease
+		opacity: 0
+		&.on
+			opacity: 1
+			transform: translateY(0)
+
 		.img-wrap
 			display: inline-block
 			width: 100%
@@ -472,8 +480,103 @@ body textarea:required:valid
 				background-position: -16px 0
 
 
-		
+.homesect.section_8
+	padding-top: 50px
+	.section-head
+		margin-bottom: 55px
+		h2, p
+			text-align: left
+		h2
+			margin-top: 0
+			&::after
+				left: 0
+				right: auto
+				transform: none
+	.s8-items
+		.s8-item
+			text-align: center
+			max-width: 165px
+			transition: all .5s ease
+			opacity: 0
+			transform: translateX(-15px)
+			&.on
+				opacity: 1
+				transform: translateY(0)
+			.img-wrap
+				display: inline-block
+				vertical-align: bottom
+				img
+					height: 72px
+			p
+				font-family: "RobotoBold", $helvetica
+				line-height: em(20px)
+				margin: 30px 0
+	.s8-right
+		margin-top: 40px
+				
 			
+	.forms.light
+		background-color: #ddd
+		border-color: #828282
+		color: #5e6267
+		h4
+			color: #2c3949
+		input
+			background-color: #C0C0C0
+			box-shadow: 0 -3px 0 #737373
+			color: #333
+		p
+			color: #5e6267
+
+
+.main-footer
+	padding-bottom: 60px
+	.logo
+		opacity: 0.35
+	.phone
+		opacity: 0.45
+	.main-mnu
+		color: #A7ABAF
+
+
+.top
+	height: 36px
+	background-color: #1F2B3A
+	background-image: url(img/top.png)
+	background-repeat: no-repeat
+	background-position: center
+	cursor: pointer
+	width: 100%
+
+#callback
+	max-width: 300px
+	margin: auto
+	background-color: #243343
+	position: relative
+
+
+.mfp-forms
+	.mfp-close
+		color: #fff
+  &.mfp-bg
+    opacity: 0
+    -webkit-transition: all 0.15s ease-out
+    -moz-transition: all 0.15s ease-out
+    transition: all 0.15s ease-out
+    &.mfp-ready
+      opacity: 0.8
+    &.mfp-removing
+      opacity: 0
+  &.mfp-wrap
+    .mfp-content
+      opacity: 0
+      -webkit-transition: all 0.15s ease-out
+      -moz-transition: all 0.15s ease-out
+      transition: all 0.15s ease-out
+    &.mfp-ready .mfp-content
+      opacity: 1
+    &.mfp-removing .mfp-content
+      opacity: 0
 
 
 //ALWAYS END

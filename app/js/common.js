@@ -16,6 +16,25 @@ $(document).ready(function() {
 $(".main-mnu li").click(function () { 
 	$(".main-mnu li").removeClass("active");
 	$(this).toggleClass("active");
+	return false;
+});
+
+$(".main-footer .toggle-mnu").click(function () {
+	$("html, body").animate({ scrollTop: $(document).height()}, "slow");
+	return false;
+
+});
+
+$(".top").click(function () {
+	$("html, body").animate({ scrollTop: 0}, "slow");
+	return false;
+
+});
+
+$(".arrow-down").click(function () {
+	$("html, body").animate({ scrollTop: $(".main-head").height() + 126}, "slow");
+	return false;
+
 });
 
 $(".s1-bottom .info-item").equalHeights();
@@ -59,10 +78,44 @@ $(".slider-container").owlCarousel({
 	loop: true, 
 	nav: true, 
 	navText: "",
-	smartSpeed: 1000
+	smartSpeed: 1000,
+	autoplay:true,
+	autoplayHoverPause:true
+
 });
 
 
+$(".homesect .section-bottom .button").click(function() {
+	$("#callback h4").html($(this).text());
+	$("#callback input[name=formname]").val($(this).text());
+}).magnificPopup({
+	type:"inline",
+	mainClass: "mfp-forms"
+});
+
+// Animations
+$(".section-head h2, .section-head p").animated("fadeInLeft");
+$(".section_8 .forms").animated("fadeInRight");
+$(".info-item-wrap").animated("zoomIn");
+
+
+$(".s2-item-wrap").waypoint(function() {
+	$(".s2-item").each(function(index) {
+		var ths = $(this);
+		setInterval(function() {
+			$(ths).addClass("on");
+		}, 150*index)
+	})
+}, { offset: "30%"})
+
+$(".section_8").waypoint(function() {
+	$(".s8-item").each(function(index) {
+		var ths = $(this);
+		setInterval(function() {
+			$(ths).addClass("on");
+		}, 150*index)
+	})
+}, { offset: "30%"})
 
 	//Цели для Яндекс.Метрики и Google Analytics
 	$(".count_element").on("click", (function() {

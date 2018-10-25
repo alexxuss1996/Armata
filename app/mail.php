@@ -5,10 +5,13 @@ $recepient = "youmail@ya.ru";
 $sitename  = "Название Сайта";
 $subject   = "Новая заявка с сайта \"$sitename\"";
 
+
 $name = trim($_POST["name"]);
 $email = trim($_POST["email"]);
+$formname = trim($_POST["formname"]);
 
 $message = "
+Форма: $formname <br>
 E-mail: $email <br>
 Имя: $name
 ";
