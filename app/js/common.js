@@ -1,7 +1,7 @@
 $(document).ready(function() {
-
-
-
+	
+	
+	
 	$(".toggle-mnu").click(function () { 
 		$(this).toggleClass("on");
 		$(".main-mnu").slideToggle("normal", function () { 
@@ -9,10 +9,20 @@ $(document).ready(function() {
 			if ($(this).css("display") === "none") {
 				$(this).removeAttr("style");
 			}
-		 });
-		 return false;
+		});
+		return false;
 	});
-
+	
+	$(".slider-container").owlCarousel({
+		items: 1, 
+		loop: true, 
+		nav: true, 
+		navText: "",
+		smartSpeed: 1000,
+		autoplay:true,
+		autoplayHoverPause:true
+	
+	});
 $(".main-mnu li").click(function () { 
 	$(".main-mnu li").removeClass("active");
 	$(this).toggleClass("active");
@@ -34,7 +44,15 @@ $(".top").click(function () {
 $(".arrow-down").click(function () {
 	$("html, body").animate({ scrollTop: $(".main-head").height() + 126}, "slow");
 	return false;
+	
+});
 
+$(".homesect .section-bottom .button").click(function() {
+	$("#callback h4").html($(this).text());
+	$("#callback input[name=formname]").val($(this).text());
+}).magnificPopup({
+	type:"inline",
+	mainClass: "mfp-forms"
 });
 
 $(".s1-bottom .info-item").equalHeights();
@@ -73,27 +91,7 @@ $(".section_6").waypoint(function() {
 	})
 }, { offset: "20%"})
 
-$(".slider-container").owlCarousel({
-	items: 1, 
-	loop: true, 
-	nav: true, 
-	navText: "",
-	smartSpeed: 1000,
-	autoplay:true,
-	autoplayHoverPause:true
 
-});
-
-
-$(".homesect .section-bottom .button").click(function() {
-	$("#callback h4").html($(this).text());
-	$("#callback input[name=formname]").val($(this).text());
-}).magnificPopup({
-	type:"inline",
-	mainClass: "mfp-forms"
-});
-
-// Animations
 $(".section-head h2, .section-head p").animated("fadeInLeft");
 $(".section_8 .forms").animated("fadeInRight");
 $(".info-item-wrap").animated("zoomIn");
